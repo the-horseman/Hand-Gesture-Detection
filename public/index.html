@@ -1,35 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Web site created using create-react-app" />
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hand Gesture Detection</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="extra.css">
+	<script src="%PUBLIC_URL%/extra.js"></script>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<div id="intro-page">
+		<div style="width: 100vw; position: absolute; display: flex; justify-content: space-around;">
+			<div id="nav-bar">
+				<a class="nav-ele" id="name" href="#abt">Aryan Rishi Lamba</a>
+				<a class="nav-ele" id="pro-des" href="#proj-head">Project Description</a>
+				<a class="nav-ele" id="ins" href="#inst">Instructions</a>
+				<a class="nav-ele" id="det" href="#det-head">Detection</a>
+			</div>
+		</div>
+		<div id="pro-name">
+			<p id="pro-tit">Hand Gesture Detection</p>
+		</div>
+		<div id="hello-box">
+			<p id="hlo">Hello!</p>
+			<p id="pro-intro">This is my college Project for 6th Semester.</p>
+		</div>
+	</div>
+	<div>
+		<p id="proj-head">Project Description</p>
+	</div>
+	<div id="proj-body">
+		<p>This is a web application that accepts hand gestures as input, detects them as one of 6 gestures,
+			and then plays the game.</p>
+		<p>The dataset for the machine learning model was built by clicking many times on a single
+			classifiable motion and then saving it for subsequent use in training the model. The information
+			was then preprocessed. The aforementioned challenges were completed using OpenCV.</p>
+		<p>I trained the image recognition system successfully using a Convolutional Neural Network model
+			that I designed.</p>
+		<p>The model was deployed on a web-based application, which displays the prediction of the User's
+			gesture. It then feeds every collected frame to the model, which produces predictions. This
+			prediction is then returned to the web application and shown alongside the frame that was
+			provided to the model for prediction.</p>
+	</div>
+	<div id="inst">
+		<svg class="elip-des" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1521 9">
+			<g id="Group_6" data-name="Group 6" transform="translate(-213 -2213)">
+				<circle id="Ellipse_1" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(213 2213)" />
+				<circle id="Ellipse_1-2" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(231 2213)" />
+				<circle id="Ellipse_1-3" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(249 2213)" />
+				<circle id="Ellipse_1-4" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(267 2213)" />
+				<circle id="Ellipse_1-5" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(285 2213)" />
+				<circle id="Ellipse_1-6" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(303 2213)" />
+				<circle id="Ellipse_1-7" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(321 2213)" />
+				<circle id="Ellipse_1-8" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(339 2213)" />
+				<circle id="Ellipse_1-9" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(357 2213)" />
+				<circle id="Ellipse_1-10" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(375 2213)" />
+				<circle id="Ellipse_1-11" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(393 2213)" />
+				<circle id="Ellipse_1-12" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(411 2213)" />
+				<circle id="Ellipse_1-13" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(429 2213)" />
+				<circle id="Ellipse_1-14" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(447 2213)" />
+				<circle id="Ellipse_1-15" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(465 2213)" />
+				<circle id="Ellipse_1-16" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(483 2213)" />
+				<circle id="Ellipse_1-17" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(501 2213)" />
+				<circle id="Ellipse_1-18" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(519 2213)" />
+				<circle id="Ellipse_1-19" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(537 2213)" />
+				<circle id="Ellipse_1-20" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(555 2213)" />
+				<circle id="Ellipse_1-21" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(573 2213)" />
+				<circle id="Ellipse_1-22" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(591 2213)" />
+				<circle id="Ellipse_1-23" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(609 2213)" />
+				<circle id="Ellipse_1-24" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(627 2213)" />
+				<circle id="Ellipse_1-25" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(645 2213)" />
+				<circle id="Ellipse_1-26" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(663 2213)" />
+				<circle id="Ellipse_1-27" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(681 2213)" />
+				<circle id="Ellipse_1-28" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(699 2213)" />
+				<circle id="Ellipse_1-29" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(717 2213)" />
+				<circle id="Ellipse_1-30" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(735 2213)" />
+				<circle id="Ellipse_1-31" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(753 2213)" />
+				<circle id="Ellipse_1-32" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(771 2213)" />
+				<circle id="Ellipse_1-33" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(789 2213)" />
+				<circle id="Ellipse_1-34" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(807 2213)" />
+				<circle id="Ellipse_1-35" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(825 2213)" />
+				<circle id="Ellipse_1-36" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(843 2213)" />
+				<circle id="Ellipse_1-37" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(861 2213)" />
+				<circle id="Ellipse_1-38" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(879 2213)" />
+				<circle id="Ellipse_1-39" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(897 2213)" />
+				<circle id="Ellipse_1-40" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(915 2213)" />
+				<circle id="Ellipse_1-41" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(933 2213)" />
+				<circle id="Ellipse_1-42" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(951 2213)" />
+				<circle id="Ellipse_1-43" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(969 2213)" />
+				<circle id="Ellipse_1-44" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(987 2213)" />
+				<circle id="Ellipse_1-45" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1005 2213)" />
+				<circle id="Ellipse_1-46" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1023 2213)" />
+				<circle id="Ellipse_1-47" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1041 2213)" />
+				<circle id="Ellipse_1-48" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1059 2213)" />
+				<circle id="Ellipse_1-49" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1077 2213)" />
+				<circle id="Ellipse_1-50" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1095 2213)" />
+				<circle id="Ellipse_1-51" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1113 2213)" />
+				<circle id="Ellipse_1-52" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1131 2213)" />
+				<circle id="Ellipse_1-53" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1149 2213)" />
+				<circle id="Ellipse_1-54" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1167 2213)" />
+				<circle id="Ellipse_1-55" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1185 2213)" />
+				<circle id="Ellipse_1-56" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1203 2213)" />
+				<circle id="Ellipse_1-57" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1221 2213)" />
+				<circle id="Ellipse_1-58" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1239 2213)" />
+				<circle id="Ellipse_1-59" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1257 2213)" />
+				<circle id="Ellipse_1-60" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1275 2213)" />
+				<circle id="Ellipse_1-61" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1293 2213)" />
+				<circle id="Ellipse_1-62" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1311 2213)" />
+				<circle id="Ellipse_1-63" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1329 2213)" />
+				<circle id="Ellipse_1-64" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1347 2213)" />
+				<circle id="Ellipse_1-65" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1365 2213)" />
+				<circle id="Ellipse_1-66" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1383 2213)" />
+				<circle id="Ellipse_1-67" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1401 2213)" />
+				<circle id="Ellipse_1-68" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1419 2213)" />
+				<circle id="Ellipse_1-69" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1437 2213)" />
+				<circle id="Ellipse_1-70" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1455 2213)" />
+				<circle id="Ellipse_1-71" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1473 2213)" />
+				<circle id="Ellipse_1-72" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1491 2213)" />
+				<circle id="Ellipse_1-73" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1509 2213)" />
+				<circle id="Ellipse_1-74" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1527 2213)" />
+				<circle id="Ellipse_1-75" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1545 2213)" />
+				<circle id="Ellipse_1-76" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1563 2213)" />
+				<circle id="Ellipse_1-77" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1581 2213)" />
+				<circle id="Ellipse_1-78" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1599 2213)" />
+				<circle id="Ellipse_1-79" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1617 2213)" />
+				<circle id="Ellipse_1-80" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1635 2213)" />
+				<circle id="Ellipse_1-81" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1653 2213)" />
+				<circle id="Ellipse_1-82" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1671 2213)" />
+				<circle id="Ellipse_1-83" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1689 2213)" />
+				<circle id="Ellipse_1-84" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1707 2213)" />
+				<circle id="Ellipse_1-85" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1725 2213)" />
+			</g>
+		</svg>
+		<p id="inst-head">Instructions</p>
+		<svg class="elip-des" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1521 9">
+			<g id="Group_6" data-name="Group 6" transform="translate(-213 -2213)">
+				<circle id="Ellipse_1" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(213 2213)" />
+				<circle id="Ellipse_1-2" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(231 2213)" />
+				<circle id="Ellipse_1-3" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(249 2213)" />
+				<circle id="Ellipse_1-4" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(267 2213)" />
+				<circle id="Ellipse_1-5" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(285 2213)" />
+				<circle id="Ellipse_1-6" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(303 2213)" />
+				<circle id="Ellipse_1-7" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(321 2213)" />
+				<circle id="Ellipse_1-8" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(339 2213)" />
+				<circle id="Ellipse_1-9" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(357 2213)" />
+				<circle id="Ellipse_1-10" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(375 2213)" />
+				<circle id="Ellipse_1-11" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(393 2213)" />
+				<circle id="Ellipse_1-12" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(411 2213)" />
+				<circle id="Ellipse_1-13" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(429 2213)" />
+				<circle id="Ellipse_1-14" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(447 2213)" />
+				<circle id="Ellipse_1-15" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(465 2213)" />
+				<circle id="Ellipse_1-16" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(483 2213)" />
+				<circle id="Ellipse_1-17" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(501 2213)" />
+				<circle id="Ellipse_1-18" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(519 2213)" />
+				<circle id="Ellipse_1-19" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(537 2213)" />
+				<circle id="Ellipse_1-20" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(555 2213)" />
+				<circle id="Ellipse_1-21" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(573 2213)" />
+				<circle id="Ellipse_1-22" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(591 2213)" />
+				<circle id="Ellipse_1-23" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(609 2213)" />
+				<circle id="Ellipse_1-24" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(627 2213)" />
+				<circle id="Ellipse_1-25" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(645 2213)" />
+				<circle id="Ellipse_1-26" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(663 2213)" />
+				<circle id="Ellipse_1-27" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(681 2213)" />
+				<circle id="Ellipse_1-28" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(699 2213)" />
+				<circle id="Ellipse_1-29" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(717 2213)" />
+				<circle id="Ellipse_1-30" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(735 2213)" />
+				<circle id="Ellipse_1-31" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(753 2213)" />
+				<circle id="Ellipse_1-32" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(771 2213)" />
+				<circle id="Ellipse_1-33" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(789 2213)" />
+				<circle id="Ellipse_1-34" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(807 2213)" />
+				<circle id="Ellipse_1-35" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(825 2213)" />
+				<circle id="Ellipse_1-36" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(843 2213)" />
+				<circle id="Ellipse_1-37" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(861 2213)" />
+				<circle id="Ellipse_1-38" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(879 2213)" />
+				<circle id="Ellipse_1-39" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(897 2213)" />
+				<circle id="Ellipse_1-40" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(915 2213)" />
+				<circle id="Ellipse_1-41" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(933 2213)" />
+				<circle id="Ellipse_1-42" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(951 2213)" />
+				<circle id="Ellipse_1-43" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(969 2213)" />
+				<circle id="Ellipse_1-44" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(987 2213)" />
+				<circle id="Ellipse_1-45" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1005 2213)" />
+				<circle id="Ellipse_1-46" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1023 2213)" />
+				<circle id="Ellipse_1-47" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1041 2213)" />
+				<circle id="Ellipse_1-48" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1059 2213)" />
+				<circle id="Ellipse_1-49" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1077 2213)" />
+				<circle id="Ellipse_1-50" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1095 2213)" />
+				<circle id="Ellipse_1-51" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1113 2213)" />
+				<circle id="Ellipse_1-52" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1131 2213)" />
+				<circle id="Ellipse_1-53" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1149 2213)" />
+				<circle id="Ellipse_1-54" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1167 2213)" />
+				<circle id="Ellipse_1-55" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1185 2213)" />
+				<circle id="Ellipse_1-56" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1203 2213)" />
+				<circle id="Ellipse_1-57" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1221 2213)" />
+				<circle id="Ellipse_1-58" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1239 2213)" />
+				<circle id="Ellipse_1-59" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1257 2213)" />
+				<circle id="Ellipse_1-60" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1275 2213)" />
+				<circle id="Ellipse_1-61" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1293 2213)" />
+				<circle id="Ellipse_1-62" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1311 2213)" />
+				<circle id="Ellipse_1-63" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1329 2213)" />
+				<circle id="Ellipse_1-64" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1347 2213)" />
+				<circle id="Ellipse_1-65" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1365 2213)" />
+				<circle id="Ellipse_1-66" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1383 2213)" />
+				<circle id="Ellipse_1-67" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1401 2213)" />
+				<circle id="Ellipse_1-68" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1419 2213)" />
+				<circle id="Ellipse_1-69" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1437 2213)" />
+				<circle id="Ellipse_1-70" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1455 2213)" />
+				<circle id="Ellipse_1-71" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1473 2213)" />
+				<circle id="Ellipse_1-72" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1491 2213)" />
+				<circle id="Ellipse_1-73" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1509 2213)" />
+				<circle id="Ellipse_1-74" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1527 2213)" />
+				<circle id="Ellipse_1-75" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1545 2213)" />
+				<circle id="Ellipse_1-76" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1563 2213)" />
+				<circle id="Ellipse_1-77" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1581 2213)" />
+				<circle id="Ellipse_1-78" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1599 2213)" />
+				<circle id="Ellipse_1-79" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1617 2213)" />
+				<circle id="Ellipse_1-80" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1635 2213)" />
+				<circle id="Ellipse_1-81" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1653 2213)" />
+				<circle id="Ellipse_1-82" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1671 2213)" />
+				<circle id="Ellipse_1-83" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1689 2213)" />
+				<circle id="Ellipse_1-84" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1707 2213)" />
+				<circle id="Ellipse_1-85" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5"
+					transform="translate(1725 2213)" />
+			</g>
+		</svg>
+
+	</div>
+	<div id="inst-body">
+		<div class="hnd">
+			<div>
+				<img class="gst-img" src="./images/1-finger.png">
+				<p class="gest">One</p>
+			</div>
+			<div>
+				<img class="gst-img" src="./images/2-finger.png">
+				<p class="gest">Two</p>
+			</div>
+			<div>
+				<img class="gst-img" src="./images/3-finger.png">
+				<p class="gest">Three</p>
+			</div>
+		</div>
+		<div id="instructions">
+			<p>Click on the Start Game button to start the hand-held game. You need to
+				give all the required camera permissions to play the game.</p>
+			<p>Once the game engine starts, you will make a hand gesture from these
+				six hand-gestures and and the predicted value will be shown below the
+				camera window.</p>
+			<p>When you are satisfied with the current value, you can chose the value
+				by clicking the Choose button or quit the game by clicking the Quit button.</p>
+			<p>If the value chosen by the user and the random value generated by the
+				bowler are same the batsman is out and the innings change. </p>
+		</div>
+		<div class="hnd" id="rt-hnd">
+			<div>
+				<img class="gst-img" src="./images/4-finger.png">
+				<p class="gest">Four</p>
+			</div>
+			<div>
+				<img class="gst-img" src="./images/5-finger.png">
+				<p class="gest">Five</p>
+			</div>
+			<div>
+				<img class="gst-img" src="./images/6-finger.png">
+				<p class="gest">Six</p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<p id="det-head">Detection</p>
+	</div>
+	<div id="detect">
+		
+	</div>
+	<div id="abt">
+		<p id="own-nme">Project By : Aryan Rishi Lamba</p>
+		<a id="pro-lnk"
+			href="https://github.com/the-horseman/Hand-Gesture-Detection">github.com/the-horseman/Hand-Gesture-Detection</a>
+	</div>
+	<!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +470,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

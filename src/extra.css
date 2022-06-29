@@ -1,0 +1,109 @@
+::-webkit-scrollbar {
+    background-color: rgb(0, 0, 0, 0.0);
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: rgb(0, 0, 0, 0.0);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear,
+            40% 0%,
+            75% 84%,
+            from(#a0a0a0c0),
+            to(#a0a0a0c0),
+            color-stop(.6, #cdcdcd));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(0, 0, 0, 0.0);
+    background: #757575;
+}
+
+.btn,
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: max(2vw, 12px);
+    padding: 1.7vw 4vw;
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.2s;
+    position: absolute;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.det-but {
+    font-size: 2vw;
+    font-weight: 500;
+    background-color: #24BAF1;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    border: none;
+}
+
+.det-but:hover {
+    color: white;
+    font-weight: 700;
+    box-shadow: 0px 5px 50px rgba(178, 235, 255, 0.564);
+    background: black;
+}
+
+.det-but:active {
+    background-color: black;
+    border: 0.35vw solid #81D2F6;
+    color: #d1f1ff;
+    box-shadow: 0px 1px 20px rgba(178, 235, 255, 0.564);
+    transform: translateY(4px);
+}
+
+span {
+    opacity: 0;
+    transition: all 3s ease;
+    display: inline;
+}
+
+span.fade {
+    opacity: 1;
+}

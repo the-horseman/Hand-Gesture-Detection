@@ -1,13 +1,329 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body,
+html {
+    margin: 0%;
+    font-family: 'Open Sans';
+    background-image: url("/public/images/hex-des.png");
+    background-repeat: repeat;
+    background-size: max(50vw, 400px);
+    scroll-behavior: smooth;
+    overflow: overlay;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#intro-page {
+    display: flex;
+    flex-direction: row;
+    height: 45vw;
+    min-height: 500px;
+    background: linear-gradient(-70deg, black 45%, #009EDD 30%);
+    position: relative;
+}
+
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 300px;
+    width: 55%;
+    align-self: center;
+}
+
+.nav-ele {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    width: 12vw;
+    min-width: fit-content;
+    min-width: 30px;
+    font-size: max(1.5vw, 9px);
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-ele:hover {
+    padding-bottom: 1%;
+    border-bottom: 3px solid black;
+}
+
+#name {
+    background-color: black;
+    width: 15vw;
+    min-width: 70px;
+    padding: 2vw 1vw 2vw 1vw;
+    font-size: max(2vw, 11px);
+    border-right: 5px solid black;
+}
+
+#name:hover {
+    padding: 2vw 1vw 2vw 1vw;
+    border-bottom: none;
+}
+
+#pro-name {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#pro-tit {
+    font-size: max(7vw, 40px);
+    font-weight: bold;
+}
+
+#hello-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    color: white;
+    text-align: center;
+}
+
+#hlo {
+    font-family: 'Homemade Apple', cursive;
+    font-size: max(4.5vw, 30px);
+    margin-bottom: -1%;
+}
+
+#pro-intro {
+    width: 80%;
+    margin-top: -1%;
+    font-family: 'Caveat';
+    font-size: max(3.7vw, 20px);
+}
+
+#proj-head {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding: 1.5vh 0vw 1.5vh 0vw;
+    font-size: max(4vw, 30px);
+    ;
+}
+
+#proj-body {
+    text-align: left;
+    color: #1D1D1D;
+    padding: 2vh 6vw 2vh 6vw;
+    font-size: max(1.8vw, 15px);
+}
+
+#inst {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#inst-head {
+    font-size: max(4vw, 30px);
+    line-height: 0%;
+}
+
+.elip-des {
+    padding: 0% 0% 0% 0%;
+    width: 80vw;
+}
+
+#inst-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#rt-hnd {
+    margin-right: 1vw;
+}
+
+.gest {
+    text-align: center;
+    line-height: 0%;
+    font-size: max(1.5vw, 12px);
+    ;
+}
+
+.gst-img {
+    height: max(6vw, 50px);
+    width: max(6vw, 50px);
+}
+
+#instructions {
+    text-align: left;
+    color: #1D1D1D;
+    padding: 2vw 3vw 2vw 3vw;
+    font-size: max(1.8vw, 15px);
+    ;
+}
+
+#det-head {
+    text-align: center;
+    background-color: white;
+    color: black;
+    margin: 0%;
+    padding: 1.5vh 0vw 1.5vh 0vw;
+    font-size: max(4.0vw, 30px);
+}
+
+#detect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vw;
+    min-height: 430px;
+    background: repeating-linear-gradient(-70deg, #24BAF1 0vw, #24BAF1 22vw, #24BAF1 22vw, #81D2F6 22vw, #81D2F6 45vw);
+}
+
+#det-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    width: 90vw;
+    background: linear-gradient(-70deg, #009EDD 45%, black 30%);
+}
+
+#lft-bx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+}
+
+#rt-box {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+#greet {
+    font-size: max(6vw, 30px);
+    color: white;
+    text-align: center;
+}
+
+#cam {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+
+#img {
+    height: 22vw;
+    width: 22vw;
+    margin-left: 8vw;
+}
+
+#butts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#pred {
+    color: white;
+    font-size: max(2.5vw, 18px);
+    /* line-height: 0%; */
+    text-align: center;
+}
+
+#chse {
+    height: 8.8vw;
+    width: 8.8vw;
+}
+
+#qut {
+    height: 7vw;
+    width: 7vw;
+}
+
+#det-res {
+    width: 100%;
+    height: 100%;
+    font-size: max(2.5vw, 15px);
+    /* line-height: 70%; */
+    color: white;
+}
+
+#det-res p {
+    width: 100%;
+    text-align: left;
+}
+
+#res {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 100%;
+}
+
+.scr {
+    text-align: left;
+    font-size: max(3.2vw, 20px);
+    /* line-height: 0%; */
+    width: 80%;
+}
+
+#winn {
+    width: 80%;
+    line-height: 0%;
+    font-size: max(4vw, 25px);
+    text-align: left;
+}
+
+#bye {
+    display: none;
+    font-size: max(5vw, 25px);
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#abt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url("/public/images/abt-des.png");
+    background-size: 28vw 7vw;
+    background-repeat: repeat;
+    width: 100vw;
+}
+
+#own-nme {
+    line-height: 0%;
+    font-size: max(2.3vw, 15px);
+    width: 100%;
+    text-align: center;
+}
+
+#pro-lnk {
+    text-decoration: none;
+    font-size: max(2vw, 12px);
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding-bottom: 1vw;
 }
