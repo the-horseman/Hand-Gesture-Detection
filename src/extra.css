@@ -77,11 +77,11 @@
     font-size: 2vw;
     font-weight: 500;
     background-color: #24BAF1;
-    border-radius: 100px;
     cursor: pointer;
     transition: 0.2s ease-in;
     border: none;
 }
+
 
 .det-but:hover {
     color: white;

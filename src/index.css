@@ -206,9 +206,14 @@ html {
 #rt-box {
     display: flex;
     width: 40%;
+    height: 100%;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+}
+
+#str-butt {
+    font-weight: bold;
 }
 
 #greet {
@@ -225,8 +230,15 @@ html {
     height: 80%;
 }
 
+#stp-2 {
+    height: 100%;
+    width: 100%;
+}
+
 #img {
     height: 22vw;
+    min-height: 100px;
+    min-width: 100px;
     width: 22vw;
     margin-left: 8vw;
 }
@@ -242,8 +254,21 @@ html {
 #pred {
     color: white;
     font-size: max(2.5vw, 18px);
-    /* line-height: 0%; */
+    margin-top: -0.1vw;
     text-align: center;
+    margin-left: -7vw;
+}
+
+#chs-but {
+    height: 8vw;
+    width: 8vw;
+    border-radius: 15vw;
+}
+
+#qt-but {
+    height: 7vw;
+    width: 7vw;
+    border-radius: 15vw;
 }
 
 #chse {
@@ -260,7 +285,6 @@ html {
     width: 100%;
     height: 100%;
     font-size: max(2.5vw, 15px);
-    /* line-height: 70%; */
     color: white;
 }
 
@@ -270,7 +294,7 @@ html {
 }
 
 #res {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -290,15 +314,6 @@ html {
     line-height: 0%;
     font-size: max(4vw, 25px);
     text-align: left;
-}
-
-#bye {
-    display: none;
-    font-size: max(5vw, 25px);
-    color: white;
-    width: 100%;
-    height: 100%;
-    text-align: center;
 }
 
 #abt {
