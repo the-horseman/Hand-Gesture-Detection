@@ -19,11 +19,13 @@ function Right() {
 
 	return (
 		<div id='rt-box'>
-			{gameFinished == null ?
+			{ gameFinished == null ?
 				showCanvas ?
 					callfunc() :
 					<p id='greet'>Happy Playing!</p> :
-				<p id='greet'>Game Finished!</p>}
+					gameFinished == "Completed" ? 
+					<p id='greet'>Game Finished!</p> : 
+					<p id='greet'>Game Was Stopped Midway!</p> }
 		</div>
 	)
 }

@@ -9,8 +9,8 @@ function App() {
 	const [showCanvas, setShowCanvas] = useState(false);
 	const [curBatsman, setCurBatsman] = useState("User");
 	const [batsmanScore, setBatsmanScore] = useState(0);
-	const [aiValue, setAiValue] = useState(null);
-	const [userValue, setUserValue] = useState(null);
+	const [aiValue, setAiValue] = useState(0);
+	const [userValue, setUserValue] = useState(0);
 	const [required, setRequired] = useState(null);
 	const [gameFinished, setGameFinished] = useState(null);
 	const [totUserScore, setTotUserScore] = useState(0);

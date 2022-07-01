@@ -22,7 +22,7 @@ function Left() {
                     <p className="scr">User Score : {totUserScore}
                         <br /> AI Score Score : {totAiScore}</p>
                     <br />
-                    <p id="winn">Winner : {winner}</p>
+                    <p id="winn">{winner != null ? `Winner : ${winner}` : "No Winner"}</p>
                 </div>}
         </div>
     )
