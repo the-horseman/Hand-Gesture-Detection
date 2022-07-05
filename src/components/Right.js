@@ -23,7 +23,7 @@ function Right() {
 				showCanvas ?
 					callfunc() :
 					<p id='greet'>Happy Playing!</p> :
-					gameFinished == "Completed" ? 
+					gameFinished === "Completed" ? 
 					<p id='greet'>Game Finished!</p> : 
 					<p id='greet'>Game Was Stopped Midway!</p> }
 		</div>

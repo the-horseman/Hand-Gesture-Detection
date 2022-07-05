@@ -9,22 +9,22 @@ const usrGestr = { "One": 1, "Ten": 10, "Two": 2, "Three": 3, "Four": 4, "Five":
 let model = null;
 
 function Camera() {
-    const { setGameFinished, setUserValue, setAiValue, setBatsmanScore,
+    const { setGameFinished, setUserValue, setAiValue, setBatsmanScore, gameFinished,
         batsmanScore, curBatsman, aiValue, userValue, setTotUserScore, setWinner,
         setCurBatsman, setRequired, setTotAiScore, totAiScore, totUserScore } = useContext(AuthContext);
 
     useEffect(() => {
         console.log(userValue, aiValue);
-        if (userValue == 0 && aiValue == 0) return;
-        if (userValue == aiValue) {
-            if (curBatsman == "User") {
+        if (userValue === 0 && aiValue === 0) return;
+        if (userValue === aiValue) {
+            if (curBatsman === "User") {
                 setTotUserScore(batsmanScore);
                 setCurBatsman("A.I.");
                 setRequired(batsmanScore);
                 setBatsmanScore(0);
             } else {
                 setTotAiScore(batsmanScore);
-                if (totUserScore > totAiScore ) {
+                if (totUserScore > totAiScore) {
                     setWinner("User");
                 } else if (totUserScore < totAiScore) {
                     setWinner("A.I.");
@@ -36,12 +36,13 @@ function Camera() {
             setAiValue(0);
             setUserValue(0);
         } else {
-            if (curBatsman == "User") {
+            if (curBatsman === "User") {
                 setBatsmanScore(batsmanScore + userValue);
             } else {
                 setBatsmanScore(batsmanScore + aiValue);
             }
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [userValue, aiValue])
 
     const [prediction, setPrediction] = React.useState('');
@@ -67,9 +68,16 @@ function Camera() {
                 .div(tf.scalar(255))
                 .expandDims();
             // console.log(input.shape);
-            const output = model.predict(input);
-            const prediction = output.argMax(1).dataSync()[0];
-            setPrediction(gestures[prediction]);
+            input.reverse(1);
+            // input.print();
+            try {
+                const output = model.predict(input);
+                const prediction = output.argMax(1).dataSync()[0];
+                setPrediction(gestures[prediction]);
+            } catch (error) {
+                console.log(error);
+                ldModel();
+            }
         });
     }
 
@@ -77,16 +85,23 @@ function Camera() {
         if (model == null) {
             ldModel();
         }
-        setTimeout(() => {
-            const imageSrc = webcamRef.current.getScreenshot();
-            const image = new Image();
-            image.src = imageSrc;
-            image.onload = () => {
-                const imgData = getImgData(image);
-                predict_basic(imgData);
-                getFrame();
-            }
-        }, 33);
+        if (gameFinished == null) {
+            setTimeout(() => {
+                try {
+                    const imageSrc = webcamRef.current.getScreenshot();
+                    const image = new Image();
+                    image.src = imageSrc;
+                    image.onload = () => {
+                        const imgData = getImgData(image);
+                        predict_basic(imgData);
+                        getFrame();
+                    }
+                } catch (error) {
+                    console.log(error);
+                    return;
+                }
+            }, 33);
+        }
     }
 
     const setScores = () => {
@@ -123,9 +138,9 @@ function Camera() {
                 </div>
             </div>
             <p id='pred'>
-                {prediction == '' ?
+                {prediction === '' ?
                     "Loading..." :
-                    prediction == "None" ?
+                    prediction === "None" ?
                         "No gesture detected" :
                         `Detected ${prediction}`
                 }
